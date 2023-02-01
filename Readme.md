@@ -1,0 +1,1 @@
+Project to manage a shopping cart for a fictional coffee shop, fully coded by me, as part of an exercise in RocketSeat's ReactJS course. (Currently in development)
