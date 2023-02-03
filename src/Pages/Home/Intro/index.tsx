@@ -1,5 +1,5 @@
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
-import { FeatureList, RightDiv, IntroDiv, IntroHeaders, LeftDiv } from "./styles";
+import { FeatureList, RightDiv, IntroDiv, IntroHeaders, LeftDiv, Background } from "./styles";
 
 export function Intro() {
     return (
@@ -11,6 +11,13 @@ export function Intro() {
                 </IntroHeaders>
                 <FeatureList>
                     <div id="featureListLeftDiv">
+                        <img src="/Vectors/Vector(1).png"  id="vector1"/>
+                        <img src="/Vectors/Vector(2).png"  id="vector2"/>
+                        <img src="/Vectors/Vector(3).png"  id="vector3"/>
+                        <img src="/Vectors/Vector(5).png"  id="vector4"/>
+                        <img src="/Vectors/Vector(6).png"  id="vector5"/>
+                        <img src="/Vectors/Vector(7).png"  id="vector6"/>
+                        <img src="/Vectors/Vector(8).png"  id="vector7"/>
                         <div id="simplePurchase">
                             <span id="shoppingCartFeaturesIcon"><ShoppingCart size={16} color="#ffffff" weight="fill" /></span>
                             Compra simples e segura

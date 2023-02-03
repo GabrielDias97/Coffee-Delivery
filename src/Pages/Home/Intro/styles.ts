@@ -1,5 +1,9 @@
 import  styled  from 'styled-components';
 
+export const Background = styled.div `
+  filter: blur(80px);
+`;
+
 export const IntroDiv = styled.div `
   display: flex;
   flex-direction: row;
@@ -8,11 +12,100 @@ export const IntroDiv = styled.div `
   padding: 92px 115px;
   margin-right: 160px;
   margin-left: 160px;
+  
 `;
 
 export const LeftDiv = styled.div`
   
   
+  #vector1 {
+    position: absolute;
+    left: 15.52%;
+    right: 65.54%;
+    top: 37%;
+    bottom: 43.41%;
+
+    opacity: 0.15;
+    transform: matrix(-1, 0.05, 0.01, 1, 0, 0);
+    filter: blur(80px);
+  }
+
+  #vector2 {
+    position: absolute;
+    left: 28.22%;
+    right: 40.92%;
+    top: 20.86%;
+    bottom: 70.13%;
+
+    background: #8047F8;
+    opacity: 0.15;
+    transform: matrix(-1, -0.03, 0.03, -1, 0, 0);
+    filter: blur(80px);
+  }
+
+  #vector3 {
+    position: absolute;
+    left: 42.75%;
+    right: 42.64%;
+    top: 45.91%;
+    bottom: 44.17%;
+
+    background: #8047F8;
+    opacity: 0.15;
+    transform: matrix(-1, 0.03, 0.03, 1, 0, 0);
+    filter: blur(80px);
+  }
+
+  #vector4 {
+    position: absolute;
+    left: 13.04%;
+    right: 73.55%;
+    top: 19.99%;
+    bottom: 60.11%;
+
+    background: #EBC136;
+    opacity: 0.15;
+    transform: matrix(-1, -0.08, 0.05, -1, 0, 0);
+    filter: blur(80px);
+  }
+
+  #vector5 {
+    position: absolute;
+    left: 50.04%;
+    right: 75.55%;
+    top: 50.99%;
+    bottom: 8.11%;
+
+    background: #EBC136;
+    opacity: 0.15;
+    transform: matrix(-1, -0.08, 0.05, -1, 0, 0);
+    filter: blur(80px);
+  }
+
+  #vector6 {
+    position: absolute;
+    left: 5.12%;
+    right: -15.47%;
+    top: 38.83%;
+    bottom: -6.5%;
+
+    transform: matrix(-1, 0.04, -0.04, -1, 0, 0);
+    filter: blur(80px);
+  }
+
+  #vector7 {
+    position: absolute;
+    left: 81.82%;
+    right: -18.91%;
+    top: 21.41%;
+    bottom: 48.01%;
+
+    background: #8047F8;
+    opacity: 0.15;
+    transform: matrix(-1, -0.04, -0.04, 1, 0, 0);
+    filter: blur(80px);
+  }
+
   h1 {
     
     font-family: 'Baloo 2', cursive;
