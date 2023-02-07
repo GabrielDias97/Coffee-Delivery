@@ -32,6 +32,7 @@ export const Coffees = styled.div `
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5px;
 
     margin: 12px 87.5px 16px 87.5px;
   }
@@ -42,13 +43,13 @@ export const Coffees = styled.div `
     padding: 4px 8px;
     border-radius: 100px;
     background: ${(props) => props.theme['yellow_light']};
-
     font-size: 10px;
     line-height: 130%;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
     color: ${(props) => props.theme['yellow_dark']};
+    white-space: nowrap
   }
 
   h3 {
@@ -60,11 +61,14 @@ export const Coffees = styled.div `
     font-size: 20px;
     line-height: 130%;
     text-align: center;
+
+    color: ${(props) => props.theme['base_subtitle']};
   }
 
   figcaption {
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 8px;
     height: 36px;
     text-align: center;
 
