@@ -19,4 +19,5 @@ export const CoffeesContainer = styled.div `
   gap: 75px;
   padding-left: 160px;
   padding-right: 160px;
+  padding-bottom: 100px;
 `;
