@@ -87,6 +87,7 @@ export const BuyArea = styled.div `
     display: flex;
     align-items: center;
     margin-right: 23px;
+    width: 67px;
   }
 
   .price .local-currency {
@@ -104,7 +105,7 @@ export const BuyArea = styled.div `
     color: ${(props) => props.theme['base_text']};
     font-family: 'Baloo 2';
     font-weight: 800;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 31.2px;
   } 
 

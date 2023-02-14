@@ -1,14 +1,16 @@
 import { Header } from "../../components/Header";
-import { AdressFormDiv, AdressInputs, CheckoutContainer, CheckoutLeftDiv, CheckoutRightDiv, LeftBox, PaymentDiv } from "./styles";
+import { AdressFormDiv, AdressInputs, CheckoutContainer, CheckoutLeftDiv, CheckoutRightDiv, LeftBox, PaymentDiv, RightBox } from "./styles";
 import { useForm } from 'react-hook-form'
 import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money } from "phosphor-react";
+import { CheckoutCoffeeCard } from "../../components/CheckoutCoffeeCard";
 
 export function Checkout() {
     const { register, handleSubmit } = useForm()
 
     return (
+        <>
+        <Header />
         <CheckoutContainer>
-            <Header />
             <CheckoutLeftDiv>
                 <h3>Complete seu pedido</h3>
                 <LeftBox>
@@ -50,8 +52,25 @@ export function Checkout() {
                 </LeftBox>
             </CheckoutLeftDiv>
             <CheckoutRightDiv>
-
+                <h3>Cafés selecionados</h3>
+                <RightBox>
+                    <CheckoutCoffeeCard />
+                    <CheckoutCoffeeCard />
+                    <div className="sumOfValues">
+                        <div className="totalItems">
+                            <span>Total de itens</span> <span>R$ 29,70</span>
+                        </div>
+                        <div className="delivery">
+                            <span>Entrega</span> <span>R$ 5,00</span>
+                        </div>
+                        <div className="total">
+                            <span>Total</span> <span>R$ 34,70</span>
+                        </div>
+                    </div>
+                    <button>Confirmar pedido</button>
+                </RightBox>
             </CheckoutRightDiv>
         </CheckoutContainer>
+        </>
     )
 }

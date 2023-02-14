@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
 export const CheckoutContainer = styled.div `
-
+  display: flex;
 `;
 
 export const CheckoutLeftDiv = styled.div `
 
+  margin: 40px 32px 0px 379px;
 
   h3 {
       font-family: 'Baloo 2';
@@ -73,7 +74,11 @@ export const AdressInputs = styled.div `
       padding: 12px;
       border: 1px solid ${(props) => props.theme['base_button']};
       border-radius: 4px;
-      background: ${(props) => props.theme['base_input']} ;
+      background: ${(props) => props.theme['base_input']};
+
+      :focus {
+        outline: 1px solid ${(props) => props.theme['yellow_dark']};
+      }
   }
 
   .streetDiv input {
@@ -95,8 +100,8 @@ export const AdressInputs = styled.div `
 
   #optional {
     position: absolute;
-    top: 392px;
-    left: 537px;
+    top: 433px;
+    left: 914px;
 
     font-style: italic;
     font-weight: 400;
@@ -185,10 +190,84 @@ export const PaymentDiv = styled.div`
       background: ${(props) => props.theme['base_button']}; ;
       border: none;
       border-radius: 6px;
+      cursor: pointer;
+
+      :hover {
+        background: ${(props) => props.theme['base_hover']};
+      }
     }
   }
 `;
 
 export const CheckoutRightDiv = styled.div `
+  margin: 40px 160px 0px 32px;
 
+
+  h3 {
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    color: ${(props) => props.theme['base_subtitle']};
+    margin-bottom: 15px;
+  }
+`;
+
+export const RightBox = styled.div`
+  width: 448px;
+  height: 498px;
+  padding: 10px 40px 40px 40px;
+  border-radius: 6px 44px;
+
+  background: ${(props) => props.theme['base_card']};
+
+  button {
+    width: 368px;
+    height: 46px;
+
+    background: ${(props) => props.theme['yellow']};
+    border-radius: 6px;
+    border: none;
+
+    color: ${(props) => props.theme['white']};
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 160%;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      background: ${(props) => props.theme['yellow_dark']};
+    }
+    
+  }
+
+  .sumOfValues {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .totalItems, .delivery {
+    display: flex;
+    justify-content: space-between;
+
+    color: ${(props) => props.theme['base_text']};
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+
+    color: ${(props) => props.theme['base_subtitle']};
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+  }
 `;

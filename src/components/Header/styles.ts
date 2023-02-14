@@ -37,4 +37,5 @@ export const ShoppingCartDiv = styled.div `
   padding: 8px;
   border-radius: 6px;
   background-color: ${(props) => props.theme['yellow_light']};
+  cursor: pointer;
 `;
