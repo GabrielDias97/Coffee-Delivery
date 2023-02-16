@@ -9,9 +9,7 @@ export const IntroDiv = styled.div `
   flex-direction: row;
   justify-content: center;
   height: 34rem;
-  padding: 92px 115px;
-  margin-right: 160px;
-  margin-left: 160px;
+  padding: 92px 160px;
   
 `;
 

@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const HeaderContainer = styled.div `
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  gap: 320px;
-  padding: 2rem 8.125rem;
+  justify-content: center;
+  gap: 842.05px;
+  padding: 32px 160px;
 `;
 
 export const ShoppingInfo = styled.div `
