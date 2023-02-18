@@ -2,11 +2,12 @@ import styled from 'styled-components'
 
 export const CheckoutContainer = styled.div `
   display: flex;
+  justify-content: center;
 `;
 
 export const CheckoutLeftDiv = styled.div `
-
-  margin: 40px 32px 0px 379px;
+  display: flex;
+  flex-direction: column;
 
   h3 {
       font-family: 'Baloo 2';
@@ -15,13 +16,15 @@ export const CheckoutLeftDiv = styled.div `
       font-size: 18px;
       line-height: 130%;
       color: ${(props) => props.theme['base_subtitle']};
+
+      margin: 40px 0px 15px 160px ;
     }
 `;
 
 export const LeftBox = styled.div `
   width: 640px;
   height: 591px;
-  margin-top: 15px;
+  margin-left: 160px;
 `;
 
 export const AdressFormDiv = styled.div `
@@ -101,7 +104,7 @@ export const AdressInputs = styled.div `
   #optional {
     position: absolute;
     top: 433px;
-    left: 914px;
+    left: 813px;
 
     font-style: italic;
     font-weight: 400;
