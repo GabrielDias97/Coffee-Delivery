@@ -120,6 +120,7 @@ export const BuyArea = styled.div `
     border-radius: 6px;
         
     background: ${(props) => props.theme['base_button']};
+    cursor: pointer;
   }
 
   .quantitySelector input {
@@ -151,6 +152,11 @@ input::-webkit-inner-spin-button {
     background: ${(props) => props.theme['purple_dark']};
     border-radius: 6px;
     border: none;
+    cursor: pointer;
+
+    :hover {
+      background-color: ${(props) => props.theme['purple']};
+    }
 }
   
 `;

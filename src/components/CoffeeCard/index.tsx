@@ -1,4 +1,5 @@
 import { Plus, Minus, ShoppingCartSimple } from 'phosphor-react'
+import { useState } from 'react'
 import { BuyArea, Coffees } from './styles'
 
 interface CoffeeCardProps {
@@ -12,6 +13,25 @@ interface CoffeeCardProps {
 }
 
 export function CoffeeCard({name, imgSrc, tag1, tag2, tag3, price, description }: CoffeeCardProps) {
+
+    const [quantityInputValue, setQuantityInputValue] = useState(0)
+
+    const handleQuantityChange = (e:React.ChangeEvent<HTMLInputElement>) : void => {
+        const inputValue = parseInt(e.target.value)
+        setQuantityInputValue(inputValue)
+    }
+
+    const handleMoreOneButton = () => {
+        if (quantityInputValue <= 99) {
+            setQuantityInputValue(quantityInputValue + 1)
+        }
+    }
+
+    const handleLessOneOneButton = () => {
+        if(quantityInputValue > 0) {
+            setQuantityInputValue(quantityInputValue - 1)
+        }
+    }
 
     function tagsRenderization() {
         if(!tag2 && !tag3) {
@@ -53,9 +73,9 @@ export function CoffeeCard({name, imgSrc, tag1, tag2, tag3, price, description }
                             <span className="cost">{price}</span>
                         </div>
                         <div className="quantitySelector">
-                            <Plus size={14} color="#8047F8" weight="fill" />
-                            <input type="number" name="quantity" id="express-quantity" defaultValue={0} />
-                            <Minus size={14} color="#8047F8" weight="fill" />
+                            <Plus size={14} color="#8047F8" weight="fill" onClick={handleMoreOneButton} />
+                            <input type="number" name="quantity" id="express-quantity" value={quantityInputValue} max='99' min={0} onChange={handleQuantityChange}  />
+                            <Minus size={14} color="#8047F8" weight="fill" onClick={handleLessOneOneButton} />
                         </div>
                         <button className='cartAddButton'><ShoppingCartSimple size={22} color="#FFF" weight="fill" /></button>
                     </BuyArea>
