@@ -1,8 +1,11 @@
 import { Plus, Minus, ShoppingCartSimple } from 'phosphor-react'
-import { useState } from 'react'
+import { useState, createContext, useContext } from 'react'
 import { BuyArea, Coffees } from './styles'
+import { useForm } from 'react-hook-form'
+import { AddToCartButtonContext } from '../../contexts/AddToCartButtonContext'
 
 interface CoffeeCardProps {
+    key: number
     name: string
     imgSrc: string
     tag1: string
@@ -13,23 +16,23 @@ interface CoffeeCardProps {
 }
 
 export function CoffeeCard({name, imgSrc, tag1, tag2, tag3, price, description }: CoffeeCardProps) {
+    const { handleAddToCartButton } = useContext(AddToCartButtonContext)
 
-    const [quantityInputValue, setQuantityInputValue] = useState(0)
+    const { register, handleSubmit, watch, setValue, getValues } = useForm()
 
-    const handleQuantityChange = (e:React.ChangeEvent<HTMLInputElement>) : void => {
-        const inputValue = parseInt(e.target.value)
-        setQuantityInputValue(inputValue)
-    }
+    let quantity = watch('quantity')
 
     const handleMoreOneButton = () => {
-        if (quantityInputValue <= 99) {
-            setQuantityInputValue(quantityInputValue + 1)
+        const quantityCurrentValue = getValues('quantity')
+        if (quantityCurrentValue < 99) {
+            setValue('quantity', parseInt(quantityCurrentValue + 1))
         }
     }
 
     const handleLessOneOneButton = () => {
-        if(quantityInputValue > 0) {
-            setQuantityInputValue(quantityInputValue - 1)
+        const quantityCurrentValue = getValues('quantity')
+        if (quantityCurrentValue > 0) {
+            setValue('quantity', parseInt(quantityCurrentValue) - 1)
         }
     }
 
@@ -74,10 +77,21 @@ export function CoffeeCard({name, imgSrc, tag1, tag2, tag3, price, description }
                         </div>
                         <div className="quantitySelector">
                             <Plus size={14} color="#8047F8" weight="fill" onClick={handleMoreOneButton} />
-                            <input type="number" name="quantity" id="express-quantity" value={quantityInputValue} max='99' min={0} onChange={handleQuantityChange}  />
+                            <input 
+                                type="number" 
+                                id="express-quantity"
+                                defaultValue={0}
+                                  
+                                {...register('quantity', {  
+                                    maxLength: 2,
+                                    max: 99,
+                                    min: 0,
+                                    
+                                })}  
+                            />
                             <Minus size={14} color="#8047F8" weight="fill" onClick={handleLessOneOneButton} />
                         </div>
-                        <button className='cartAddButton'><ShoppingCartSimple size={22} color="#FFF" weight="fill" /></button>
+                        <button className='cartAddButton' onClick={handleAddToCartButton}><ShoppingCartSimple size={22} color="#FFF" weight="fill" /></button>
                     </BuyArea>
                 </div>
             </Coffees>

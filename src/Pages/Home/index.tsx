@@ -1,9 +1,12 @@
+import { createContext } from 'react'
 import { CoffeeCard } from "../../components/CoffeeCard";
 import { Header } from "../../components/Header";
 import { Intro } from "./Intro";
 import { CoffeesCardContainer, CoffeesContainer, HomeContainer } from './styles'
 
+
 export function Home() {
+
     return (
         <HomeContainer>
             <Header />
@@ -11,7 +14,8 @@ export function Home() {
             <div className="ourCoffees"><h2>Nossos cafés</h2></div>
             <CoffeesContainer>
                 <CoffeesCardContainer>
-                    <CoffeeCard 
+                    <CoffeeCard
+                        key={1} 
                         name='Expresso Tradicional'
                         imgSrc='/Coffees/Expresso.png'
                         tag1='tradicional' 
@@ -21,7 +25,8 @@ export function Home() {
                         price = '10,00' 
                     
                     />
-                    <CoffeeCard 
+                    <CoffeeCard
+                        key={2} 
                         name='Expresso Americano'
                         imgSrc='/Coffees/Americano.png'
                         tag1='tradicional' 
@@ -32,7 +37,8 @@ export function Home() {
                     
                     />
 
-                    <CoffeeCard 
+                    <CoffeeCard
+                        key={3} 
                         name='Expresso Cremoso'
                         imgSrc='/Coffees/Expresso-Cremoso.png'
                         tag1='tradicional' 
@@ -43,7 +49,8 @@ export function Home() {
                     
                     />
 
-                    <CoffeeCard 
+                    <CoffeeCard
+                        key={4} 
                         name='Expresso Gelado'
                         imgSrc='/Coffees/Café-Gelado.png'
                         tag1='tradicional' 
@@ -54,7 +61,8 @@ export function Home() {
                     
                     />
 
-                    <CoffeeCard 
+                    <CoffeeCard
+                        key={5} 
                         name='Café com leite'
                         imgSrc='/Coffees/Café-com-leite.png'
                         tag1='tradicional' 
@@ -65,7 +73,8 @@ export function Home() {
                     
                     />
 
-                    <CoffeeCard 
+                    <CoffeeCard
+                        key={6} 
                         name='Latte'
                         imgSrc='/Coffees/Latte.png'
                         tag1='tradicional' 
@@ -76,7 +85,8 @@ export function Home() {
                     
                     />
 
-                    <CoffeeCard 
+                    <CoffeeCard
+                        key={7} 
                         name='Capuccino'
                         imgSrc='/Coffees/Capuccino.png'
                         tag1='tradicional' 
@@ -87,7 +97,8 @@ export function Home() {
                     
                     />
 
-                    <CoffeeCard 
+                    <CoffeeCard
+                        key={8} 
                         name='Macchiato'
                         imgSrc='/Coffees/Macchiato.png'
                         tag1='tradicional' 
@@ -98,7 +109,8 @@ export function Home() {
                     
                     />
 
-                    <CoffeeCard 
+                    <CoffeeCard
+                        key={9} 
                         name='Mocaccino'
                         imgSrc='/Coffees/Mocaccino.png'
                         tag1='tradicional' 
@@ -109,7 +121,8 @@ export function Home() {
                     
                     />
 
-                    <CoffeeCard 
+                    <CoffeeCard
+                        key={10} 
                         name='Chocolate Quente'
                         imgSrc='/Coffees/Chocolate-Quente.png'
                         tag1='especial' 
@@ -120,7 +133,8 @@ export function Home() {
                     
                     />
 
-                    <CoffeeCard 
+                    <CoffeeCard
+                        key={11} 
                         name='Cubano'
                         imgSrc='/Coffees/Expresso.png'
                         tag1='especial' 
@@ -131,7 +145,8 @@ export function Home() {
                     
                     />
 
-                    <CoffeeCard 
+                    <CoffeeCard
+                        key={12} 
                         name='Havaiano'
                         imgSrc='/Coffees/Havaiano.png'
                         tag1='especial' 
@@ -142,7 +157,8 @@ export function Home() {
                     
                     />
 
-                    <CoffeeCard 
+                    <CoffeeCard
+                        key={13}
                         name='Árabe'
                         imgSrc='/Coffees/Árabe.png'
                         tag1='especial' 
@@ -153,7 +169,8 @@ export function Home() {
                     
                     />
 
-                    <CoffeeCard 
+                    <CoffeeCard
+                        key={14} 
                         name='Irlandês'
                         imgSrc='/Coffees/Irlandês.png'
                         tag1='tradicional' 
